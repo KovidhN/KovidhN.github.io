@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Kovidh Nougain - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Animated Cursor -->
+    <div id="custom-cursor"></div>
+    <div id="cursor-click"></div>
+
+    <!-- Header / Navigation Bar -->
+    <nav class="navbar">
+      <div class="navbar-content">
+        <div class="logo">Kovidh Nougain</div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#exp-box">Experience</a></li>
+          <li><a href="#education-box">Education</a></li>
+        </ul>
+        <!-- Hamburger / Info toggle for mobile -->
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span class="nav-toggle-icon" title="Menu or Info">ⓘ</span>
+        </button>
+      </div>
+      <!-- Mobile Dropdown (hidden by default) -->
+      <div class="nav-dropdown" id="navDropdown">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#exp-box">Experience</a></li>
+          <li><a href="#education-box">Education</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <canvas id="bg-patterns"></canvas>
+    <main>
+      <header>
+        <h1>Kovidh Nougain</h1>
+        <span class="subtitle">AI and Data Science Student</span>
+        <p class="intro">
+          Eager to apply learning to real-world challenges and contribute to
+          impactful projects in AI and Data Science.
+        </p>
+        <a href="Kovidh_CV.pdf (2).pdf" download class="resume-btn"
+          >Download Resume</a
+        >
+        <div
+          class="social-btns"
+          style="justify-content: center; margin-top: 15px"
+        >
+          <a
+            class="social-btn"
+            href="mailto:kovidhnougain@gmail.com"
+            title="Email"
+          >
+            <img src="email-logo.png" alt="Email" class="icon-img" />
+          </a>
+          <a
+            class="social-btn"
+            href="https://github.com/KovidhN"
+            target="_blank"
+            title="GitHub"
+          >
+            <img src="githublogo.png" alt="GitHub" class="icon-img" />
+          </a>
+          <a
+            class="social-btn"
+            href="https://www.linkedin.com/in/kovidh-nougain-bab68a1b0/"
+            target="_blank"
+            title="LinkedIn"
+          >
+            <img src="in-logo.png" alt="LinkedIn" class="icon-img" />
+          </a>
+        </div>
+      </header>
+
+      <section class="bento-section about" id="about">
+        <span class="section-title">About Me</span>
+        Enthusiastic AI and Data Science engineering student with a growing
+        knowledge of machine learning, data analysis, and programming. Skilled
+        in Python and beginner-level SQL, with hands-on experience from academic
+        projects and assignments. Actively exploring AI technologies and their
+        applications, with a passion for problem-solving and innovation. Strong
+        team player, demonstrated through involvement in academic and
+        extracurricular activities.
+      </section>
+
+      <section class="bento-section skills" id="skills">
+        <span class="section-title">Skills</span>
+        <div class="skills-list">
+          <span class="skill-pill">C Programming</span>
+          <span class="skill-pill">Python (DS/ML)</span>
+          <span class="skill-pill">EDA</span>
+          <span class="skill-pill">Pandas</span>
+          <span class="skill-pill">Scikitlearn</span>
+          <span class="skill-pill">Data Visualization</span>
+          <span class="skill-pill">SQL</span>
+          <span class="skill-pill">Front-end Basics</span>
+          <span class="skill-pill">Java</span>
+          <span class="skill-pill">Designing</span>
+        </div>
+      </section>
+
+      <section class="bento-section projects" id="projects">
+        <span class="section-title">Projects</span>
+        <div class="project-grid">
+          <div class="project-card">
+            <div class="project-title">Data Analysis Project</div>
+            <div>
+              Demonstrated expertise in data-driven decision-making to optimize
+              workflows.
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/KovidhN/EDA"
+                class="project-link-btn"
+                target="_blank"
+                >View on GitHub</a
+              >
+            </div>
+            <div class="tech-used">Python, Pandas, Data Visualization, EDA</div>
+          </div>
+          <div class="project-card">
+            <div class="project-title">
+              CYGAL: Explainable AI Model (in progress)
+            </div>
+            <div>Developing an XAI (Explainable AI) model named CYGAL.</div>
+            <div class="project-links">
+              <a
+                href="https://colab.research.google.com/drive/1WpKNAA0tPu8SJPy5-YVph4Ze9qpjHF5d?usp=sharing"
+                class="project-link-btn"
+                target="_blank"
+                >Project Notebook</a
+              >
+            </div>
+            <div class="tech-used">Python, Scikitlearn, Data Science, ML</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bento-section experience small-scroll" id="exp-box">
+        <button class="expand-btn" onclick="toggleBox('exp-box')">
+          Experience <span class="chevron">&#9662;</span>
+        </button>
+        <div class="expand-content scrollable-content">
+          <div class="role-row">
+            <span class="role-title">Vice Chairperson</span>
+            <span class="role-org">ACM-DTC Student Chapter</span>
+            <span class="role-location">Greater Noida, UP</span>
+            <span class="role-dates">May 2024 – Present</span>
+          </div>
+          <div class="role-row">
+            <span class="role-title">Secretary/Management Head</span>
+            <span class="role-org">ACE-DTC Student Chapter</span>
+            <span class="role-location">Greater Noida, UP</span>
+            <span class="role-dates">Oct 2024 – Present</span>
+          </div>
+          <div class="role-row">
+            <span class="role-title">Campus Ambassador</span>
+            <span class="role-org">GDSC WOW Delhi NCR</span>
+            <span class="role-location">Delhi NCR</span>
+            <span class="role-dates">Apr 2024 – May 2024</span>
+          </div>
+          <div class="role-row">
+            <span class="role-title">Director International Services</span>
+            <span class="role-org">Rotary Interact Club, SDPS</span>
+            <span class="role-location">Patel Nagar, New Delhi</span>
+            <span class="role-dates">May 2021 – Mar 2022</span>
+          </div>
+          <div class="role-row">
+            <span class="role-title">Core Member</span>
+            <span class="role-org">THE ACE</span>
+            <span class="role-location">Greater Noida, UP</span>
+            <span class="role-dates">Jan 2024 – Present</span>
+          </div>
+          <div class="role-row">
+            <span class="role-title">Deputy Headboy</span>
+            <span class="role-org">S.D. Public School</span>
+            <span class="role-location">Patel Nagar, New Delhi</span>
+            <span class="role-dates">Jun 2023 – May 2024</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="bento-section education small-scroll" id="education-box">
+        <button class="expand-btn" onclick="toggleBox('education-box')">
+          Education <span class="chevron">&#9662;</span>
+        </button>
+        <div class="expand-content scrollable-content">
+          <div class="role-row">
+            <span class="role-title">GGSIPU,</span>
+            <span class="role-org"
+              >B.Tech in Artificial Intelligence and Data Science</span
+            >
+            <span class="role-dates">2023 – 2027 (Pursuing)</span>
+            <span class="role-location">CGPA: 8.7 (Current)</span>
+          </div>
+          <div class="role-row">
+            <span class="role-title">SD Public School</span>
+            <span class="role-org">Class 12 (PCM): 71% (2022–23)</span>
+            <span class="role-org">Class 10: 89.8% (2020–21)</span>
+          </div>
+        </div>
+      </section>
+    </main>
+    <button
+      id="theme-toggle"
+      class="theme-toggle-btn"
+      aria-label="Switch color mode"
+    >
+      <span class="theme-icon" id="theme-icon">&#9788;</span>
+    </button>
+    <script
+      src="https://kit.fontawesome.com/9c9800c7e3.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
